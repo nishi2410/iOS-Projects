@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sbP-Nc-hGT">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Country View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="CountryViewController" id="BYZ-38-t0r" customClass="CountryViewController" customModule="MyWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fol-jN-An0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="qoC-1Y-cD3"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="DXv-6J-FHT"/>
+                                <color key="sectionIndexBackgroundColor" red="0.51103728100000001" green="0.7393383402" blue="0.80942683159999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CountryCell" rowHeight="124" id="FQK-Nd-IJf" customClass="CountryCell" customModule="MyWorld" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="124"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FQK-Nd-IJf" id="bld-8r-efl">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="World" translatesAutoresizingMaskIntoConstraints="NO" id="01p-gS-g8W">
+                                                    <rect key="frame" x="413" y="0.0" width="1" height="124"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country Name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LF-JM-GhY">
+                                                    <rect key="frame" x="7" y="0.0" width="397" height="20.666666666666668"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <wkWebView contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="pW2-rr-K9U">
+                                                    <rect key="frame" x="10" y="27" width="310" height="86"/>
+                                                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" id="wkc-oZ-7m8"/>
+                                                    </constraints>
+                                                    <wkWebViewConfiguration key="configuration">
+                                                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                        <wkPreferences key="preferences"/>
+                                                    </wkWebViewConfiguration>
+                                                </wkWebView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeT-BV-fGx" customClass="RoundButton" customModule="MyWorld" customModuleProvider="target">
+                                                    <rect key="frame" x="324" y="86" width="89" height="25"/>
+                                                    <color key="backgroundColor" red="0.51103728095205481" green="0.7393383402260274" blue="0.80942683155753425" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
+                                                    <state key="normal" title="Save offline">
+                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="saveCountryOffline:" destination="FQK-Nd-IJf" eventType="touchUpInside" id="SbT-Vk-acW"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="01p-gS-g8W" firstAttribute="top" secondItem="2LF-JM-GhY" secondAttribute="top" id="1FK-Ao-CRT"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="pW2-rr-K9U" secondAttribute="bottom" id="4jZ-tV-CAe"/>
+                                                <constraint firstItem="2LF-JM-GhY" firstAttribute="leadingMargin" secondItem="bld-8r-efl" secondAttribute="leading" constant="15" id="5XJ-2u-L2f"/>
+                                                <constraint firstItem="2LF-JM-GhY" firstAttribute="top" secondItem="bld-8r-efl" secondAttribute="top" id="6c8-sd-260"/>
+                                                <constraint firstItem="01p-gS-g8W" firstAttribute="trailingMargin" secondItem="2LF-JM-GhY" secondAttribute="trailing" constant="2" id="F6v-sG-NQU"/>
+                                                <constraint firstItem="aeT-BV-fGx" firstAttribute="trailing" secondItem="2LF-JM-GhY" secondAttribute="trailing" constant="9" id="ObF-r6-OYR"/>
+                                                <constraint firstItem="pW2-rr-K9U" firstAttribute="leading" secondItem="bld-8r-efl" secondAttribute="leadingMargin" multiplier="0.5" id="RW9-Xo-eDk"/>
+                                                <constraint firstAttribute="trailing" secondItem="01p-gS-g8W" secondAttribute="trailing" id="SEy-7D-WLt"/>
+                                                <constraint firstItem="aeT-BV-fGx" firstAttribute="leading" secondItem="pW2-rr-K9U" secondAttribute="trailing" constant="4" id="WL0-36-xGZ"/>
+                                                <constraint firstItem="aeT-BV-fGx" firstAttribute="top" secondItem="01p-gS-g8W" secondAttribute="bottom" constant="-38" id="fb2-UZ-Adq"/>
+                                                <constraint firstItem="pW2-rr-K9U" firstAttribute="top" secondItem="bld-8r-efl" secondAttribute="top" constant="27" id="iaM-MM-gw0"/>
+                                                <constraint firstItem="pW2-rr-K9U" firstAttribute="top" secondItem="2LF-JM-GhY" secondAttribute="bottom" constant="6.5" id="k5A-mE-HLO"/>
+                                                <constraint firstItem="aeT-BV-fGx" firstAttribute="centerY" secondItem="01p-gS-g8W" secondAttribute="centerY" constant="36.5" id="sHq-82-RNm"/>
+                                                <constraint firstItem="pW2-rr-K9U" firstAttribute="trailingMargin" secondItem="01p-gS-g8W" secondAttribute="trailing" constant="-102" id="wxg-Lf-QAC"/>
+                                                <constraint firstAttribute="bottom" secondItem="01p-gS-g8W" secondAttribute="bottom" id="yNJ-yd-4vx"/>
+                                                <constraint firstItem="01p-gS-g8W" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bld-8r-efl" secondAttribute="leading" id="z6V-uE-dQU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="btnSaveCountry" destination="aeT-BV-fGx" id="X5m-Dk-609"/>
+                                            <outlet property="countryFlag" destination="pW2-rr-K9U" id="eJP-m3-acU"/>
+                                            <outlet property="countryNameLabel" destination="2LF-JM-GhY" id="W9V-3h-d89"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="sZq-D4-xrx"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="LP8-xh-6RI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="selectedTextBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="tintColor" red="0.51103728100000001" green="0.7393383402" blue="0.80942683159999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fol-jN-An0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Dgl-GJ-Fze"/>
+                            <constraint firstItem="fol-jN-An0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bSl-Ar-qy4"/>
+                            <constraint firstAttribute="trailing" secondItem="fol-jN-An0" secondAttribute="trailing" id="dwe-sc-Cwe"/>
+                            <constraint firstAttribute="bottom" secondItem="fol-jN-An0" secondAttribute="bottom" id="fwk-t0-Rpv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kcl-lf-dCY"/>
+                    <connections>
+                        <outlet property="tableView" destination="fol-jN-An0" id="r3b-ya-0qc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="126.35869565217392"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qq1-N1-5KM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sbP-Nc-hGT" customClass="NavigationController" customModule="MyWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qtq-Vk-AYK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Jcu-QM-R54"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gIo-FW-g0w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="World" width="640" height="320"/>
+    </resources>
+</document>
